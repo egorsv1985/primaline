@@ -1,0 +1,119 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.title {
+  h3 {
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+  &::before {
+    @include pseudo;
+    width: 100vw;
+    height: 1px;
+    background-color: #d6d6d6;
+    right: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 30px;
+  }
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}
+
+.fs-14 {
+  font-size: 0.875rem;
+  line-height: 136%;
+}
+.fs-15 {
+  font-size: 0.9375rem;
+  line-height: 136%;
+}
+
+.fs-16 {
+  font-size: 1rem;
+  line-height: 110%;
+}
+.fs-18 {
+  font-size: 1.125rem;
+  line-height: 138%;
+}
+
+.fs-20 {
+  font-size: 1.25rem;
+  line-height: 136%;
+}
+.lh-11 {
+  line-height: 110%;
+}
+.lh-15 {
+  line-height: 115%;
+}
+.lh-12 {
+  line-height: 120%;
+}
+.lh-13 {
+  line-height: 137%;
+}
+
+.fs-24 {
+  font-size: 1.5rem;
+  line-height: 113%;
+}
+.fs-32 {
+  font-size: 2rem;
+  line-height: 125%;
+}
+.fs-30 {
+  font-size: 1.875rem;
+  line-height: 117%;
+}
+.fs-36 {
+  font-size: 2.25rem;
+  line-height: 117%;
+}
+.fs-40 {
+  font-size: 2.5rem;
+  line-height: 110%;
+}
+.fs-48 {
+  font-size: 3rem;
+  line-height: 110%;
+}
+.fs-50 {
+  font-size: 3.125rem;
+  line-height: 114%;
+}
+.fs-64 {
+  font-size: 4rem;
+  line-height: 110%;
+  @include media (max, lg) {
+    font-size: 2.5rem;
+  }
+}
+
+.ff-roboto {
+  font-family: "Roboto";
+}

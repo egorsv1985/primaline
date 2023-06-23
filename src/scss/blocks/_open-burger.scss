@@ -1,0 +1,23 @@
+.open {
+  .header {
+    
+   &__bottom{
+    
+    left: 0;
+   background-color: #250707;
+   display: flex;
+   color: #fff;
+   justify-content: start;
+   }
+&__list{
+  gap: 20px;
+}
+  &__bottom{
+    display: flex;
+    width: 100vw;
+  }
+  }
+
+  
+
+}

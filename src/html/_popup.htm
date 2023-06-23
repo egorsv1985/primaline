@@ -1,0 +1,85 @@
+
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="callback"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalTitleId"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Консультация</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+         
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="#" class="form">
+          <div class="row gy-3">
+            <div class="form-group position-relative">
+              <input
+                type="text"
+                class="form-control form__input bg-light rounded-2 border border-secondary text-secondary p-3 h-100"
+                name="name-modal"
+                id="name-modal"
+                placeholder=""
+                required
+              />
+              <label
+                for="name-modal"
+                class="form-label form__label fs-16 text-secondary position-absolute top-50"
+                >Имя</label
+              >
+            </div>
+            <div class="form-group position-relative">
+              <input
+                type="text"
+                class="form-control form__input bg-light rounded-2 border border-secondary text-secondary p-3 h-100"
+                name="tel-modal"
+                id="tel-modal"
+                placeholder=""
+                required
+              />
+              <label
+                for="tel-modal"
+                class="form-label form__label fs-16 text-secondary position-absolute top-50"
+                >Телефон</label
+              >
+            </div>
+
+            <div class="">
+              <button
+                type="submit"
+                class="btn fs-20 fw-500 px-3 py-3 btn-primary bg-gradient w-100 border-0"
+              >
+                Отправить
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var modalId = document.getElementById("callback");
+
+  modalId.addEventListener("show.bs.modal", function (event) {
+    // Button that triggered the modal
+    let button = event.relatedTarget;
+    // Extract info from data-bs-* attributes
+    let recipient = button.getAttribute("data-bs-whatever");
+
+    // Use above variables to manipulate the DOM
+  });
+</script>

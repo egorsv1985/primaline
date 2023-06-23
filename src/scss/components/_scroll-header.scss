@@ -1,0 +1,26 @@
+.scroll-down .header {
+	
+	// transform: translate3d(0, -100%, 0);
+	&__bottom{
+		
+	  }
+}
+
+.scroll-up .header {
+	transform: none;
+	&__bottom{
+		
+	  }
+	
+
+  
+  &__bottom{
+	
+  }
+	
+}
+
+.open {
+	.header {
+		transform: translate3d(0, 0, 0);
+	}}

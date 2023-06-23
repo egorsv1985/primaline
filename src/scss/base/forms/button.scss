@@ -1,0 +1,11 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	padding: 0px 0px;
+	
+	&._fw {
+		width: 100%;
+	}
+}

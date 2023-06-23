@@ -1,0 +1,47 @@
+.menu {
+  &__list {
+    &.open {
+      ul {
+        padding: 0.5rem 0 1rem;
+      }
+
+      ul a {
+        background: none;
+      }
+    }
+  }
+  &__item + &__item {
+    position: relative;
+    &::after {
+      @include pseudo;
+      background-color: var(--text-second-color);
+      width: 1px;
+      height: 25px;
+      position: absolute;
+      left: -45px;
+      top: -5px;
+      @include media(max, lg) {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    &--bg {
+      background: url("@img/icons/burger.svg") center left / auto no-repeat;
+    }
+  }
+  &__parent {
+    ul {
+      display: none;
+      top: 35px;
+      left: 0;
+      padding: 0;
+      color: #fff;
+      background-color: #250707;
+      @include media(max, lg) {
+        left: 100px;
+        top: -10px;
+      }
+    }
+  }
+}

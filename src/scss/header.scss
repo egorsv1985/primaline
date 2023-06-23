@@ -1,0 +1,28 @@
+.header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+
+  
+  &__bottom{
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+    @include media(max, lg) {
+      position: relative;
+      display: none;
+      left: -100%;
+      transition: all .5s ease-in-out;
+      border: none;
+      
+
+    }
+    
+  }
+  svg{
+    transition: all .5s ease-in-out;
+    &:hover{
+      path:first-child{
+       fill: #5e2627;
+      }
+    }
+  }
+}
