@@ -54,7 +54,9 @@ $responsiveType: 1;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поинты
-$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$pc: em(
+  $containerWidth
+); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
 $tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(767.98); // Телефоны L
 $mobileSmall: em(479.98); // Телефоны S
@@ -81,12 +83,12 @@ $grid_breakpoints: (
   overflow: hidden;
 
   // Прижимаем footer
-  >main {
+  > main {
     flex: 1 1 auto;
   }
 
   // Фикс для слайдеров
-  >* {
+  > * {
     min-width: 0;
   }
 }
@@ -100,7 +102,6 @@ $grid_breakpoints: (
 Снипет (HTML): cnt
 */
 @if ($responsiveType==1) {
-
   // Отзывчивая
   [class*="__container"] {
     @if ($maxWidthContainer>0) {
@@ -113,10 +114,7 @@ $grid_breakpoints: (
       padding: 0 rem(math.div($containerPadding, 2));
     }
   }
-}
-
-@else {
-
+} @else {
   // По брейк-поинтам
   [class*="__container"] {
     margin: 0 auto;
@@ -124,9 +122,7 @@ $grid_breakpoints: (
     @if ($maxWidthContainer>0) {
       max-width: rem($maxWidthContainer);
       box-sizing: content-box;
-    }
-
-    @else {
+    } @else {
       @if ($containerPadding>0) {
         padding: 0 rem(math.div($containerPadding, 2));
       }
@@ -150,8 +146,6 @@ $grid_breakpoints: (
   }
 }
 
-// Подключение стилей общих элементов проекта
-@import "common";
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных классов
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
