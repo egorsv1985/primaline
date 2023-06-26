@@ -53,14 +53,10 @@
   line-height: 37px;
 }
 .fs-18 {
-  
   font-size: 18px;
-  
 }
 .fs-20 {
-  
   font-size: 20px;
-  
 }
 .fs-24 {
   font-size: 24px;
@@ -142,7 +138,7 @@ input {
   width: 100%;
   padding-left: 0;
   outline: none;
-  &::placeholder{
+  &::placeholder {
     color: #fff;
     opacity: 0.7;
   }
@@ -152,5 +148,63 @@ input {
     color: #ffffff;
     letter-spacing: 0;
     line-height: 1.4;
+  }
+}
+.specifics {
+  padding-top: 80px;
+
+  &__list li {
+    &::after {
+      @include pseudo;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #e31e24;
+      border-radius: 50%;
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+.steps {
+  &__list {
+    list-style-type: none;
+  }
+  &__item {
+    &::before {
+      content: "1";
+      display: flex;
+      color: #e31e24;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+
+      font-weight: 700;
+      line-height: 27px;
+      width: 40px;
+      height: 40px;
+      top: 0;
+      position: absolute;
+      left: -40px;
+      border: 1px solid #e31e24;
+      border-radius: 50%;
+     z-index: 1;
+    }
+    &::after {
+      @include pseudo;
+      position: absolute;
+      top: 40px;
+      bottom: 0;
+      left: -20px;
+      width: 1px;
+      background-color: #e31e24;
+      z-index: -1;
+    }
+    &:last-child{
+      &::after{
+        display: none;
+      }
+    }
   }
 }
